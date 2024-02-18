@@ -33,6 +33,26 @@ npx hardhat --network luksoMainnet run scripts/redefineBurntPix.ts
 npx hardhat --network luksoTestnet run scripts/redefineBurntPix.ts
 ```
 
+```text
+-----------------------------------------------------------------------------------------------
+--- Current Controller:  0xE929859839B0e624f88c169dcAdf5c662967691d
+--- Current LYX Balance:  5.219111508945610286
+--- Current Gas Price:  1.39763443
+--- Getting Metadata for:  0x000000000000000000000000f5603116f71d29e26b9f4cdcc6242a888ccc9900
+-----------------------------------------------------------------------------------------------
+Iterations: 987000
+GasUsed: 7.38B
+FeesBurnt: 7.55LYX
+TipsPaid: 3.91LYX
+-----------------------------------------------------------------------------------------------
+[23:05:19] Checking conditions for refinement...
+--- Calling refine...
+-----------------------------------------------------------------------------------------------
+Previous refinement is still processing. Skipping this round.
+-----------------------------------------------------------------------------------------------
+Refine called successfully. Waiting for next round...
+```
+
 > Use `Ctrl+C` to terminate the script.
 
 ## References

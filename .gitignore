@@ -1,5 +1,6 @@
 # Local Install
 node_modules
+.DS_Store
 
 # Private Variables
 .env

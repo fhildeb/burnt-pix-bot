@@ -85,7 +85,7 @@ async function main() {
     }
 
     console.log('--- Current Controller: ', wallet.address);
-    console.log('--- Current Balance: ', balanceInLYX);
+    console.log('--- Current LYX Balance: ', balanceInLYX);
 
     // Get gas price of the network and convert to Gwei
     const gasPrice = (await provider.getFeeData()).gasPrice;
@@ -180,11 +180,12 @@ async function main() {
           gasPrice: gasPrice,
         });
         await tx.wait();
-        console.log('Refine called successfully. Waiting for next round');
+        console.log('Refine called successfully. Waiting for next round...');
       } catch (error) {
         console.error('Transaction reverted');
       } finally {
-        isWaitingForTransaction = false; // Reset the flag after transaction completes or fails
+        // Reset the flag after transaction completes or fails
+        isWaitingForTransaction = false;
       }
     } else {
       console.log('XXX Requirement not met: Gas price too high');
