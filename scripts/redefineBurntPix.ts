@@ -2,9 +2,8 @@ import { ethers, network } from 'hardhat';
 import * as dotenv from 'dotenv';
 import { ERC725 } from '@erc725/erc725.js';
 
-import lsp4Schema from '@erc725/erc725.js/schemas/LSP4DigitalAsset.json'; // @ts-ignore: Unreachable code error
-// @ts-ignore: Constant exported properly
-import { ERC725YDataKeys } from '@lukso/lsp-smart-contracts/constants';
+import lsp4Schema from '@erc725/erc725.js/schemas/LSP4DigitalAsset.json';
+import { ERC725YDataKeys } from '@lukso/lsp-smart-contracts';
 
 import {
   TOKEN_ID,
@@ -182,7 +181,7 @@ async function main() {
         await tx.wait();
         console.log('Refine called successfully. Waiting for next round...');
       } catch (error) {
-        console.error('Transaction reverted');
+        console.error('Transaction reverted. Waiting for next round...');
       } finally {
         // Reset the flag after transaction completes or fails
         isWaitingForTransaction = false;
