@@ -34,7 +34,7 @@ dotenv.config();
 
 async function main() {
   // Set your token ID and it's final redefinenent number
-  const burntPix = TOKEN_ID.BURNT_STAR;
+  const burntPix = TOKEN_ID.SLIM_DRAGON;
   const maximumRedefines = 1111000;
 
   // Import private key to create wallet
@@ -78,7 +78,7 @@ async function main() {
     console.log(SPLITTER);
 
     if (isWaitingForTransaction) {
-      console.log('Previous refinement is still processing. Skipping this round.');
+      console.log(`[${new Date().toLocaleTimeString()}] Previous refinement is still processing. Skipping this round.`);
       console.log(SPLITTER);
       return;
     }
@@ -162,7 +162,7 @@ async function main() {
      * - Maximum iteration count for the token ID
      * - Maximum gas price you want to redefine at
      */
-    console.log(`[${new Date().toLocaleTimeString()}] Checking conditions for refinement...`);
+    console.log('--- Checking conditions for refinement...');
     if (balanceInLYXNumber <= MIN_LYX_BALANCE) {
       console.log('XXX Requirement not met: Balance less than 0.3 LYX.');
       stopScript();
@@ -175,9 +175,7 @@ async function main() {
       console.log('--- Calling refine...');
       isWaitingForTransaction = true;
       try {
-        const tx = await contract.refine(burntPix, ITERATION_NUMBER, {
-          gasPrice: gasPrice,
-        });
+        const tx = await contract.refine(burntPix, ITERATION_NUMBER);
         await tx.wait();
         console.log('Refine called successfully. Waiting for next round...');
       } catch (error) {

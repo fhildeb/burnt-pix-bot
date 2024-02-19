@@ -21,7 +21,13 @@ export const ITERATION_NUMBER =
 // Minimum LYX Balance of your controller (0.3, default so transactions dont fail)
 export const MIN_LYX_BALANCE = 0.3;
 
-// Maximum Gas Price to execute the transaction
+/**
+ * Maximum Gas Price to execute the transaction
+ * 
+ * Don't set it too low (below 1) if you don't 
+ * know how to manually reset the gas price,
+ * as the transaction might get stuck
+ */ 
 export const MAX_GAS_PRICE = 2;
 
 // Burnt Pix Contract Addresses on LUKSO Mainnet

@@ -17,6 +17,8 @@ bun install
 3. Set `burntPix` and `maximumRedefines` in [`/scripts/redefineBurntPix.ts`](./scripts/redefineBurntPix.ts)
 4. Adjust `ITERATION_NUMBER`, `MAX_GAS_PRICE` in [`/consts/constants.ts`](./consts/constants.ts)
 
+> **CAUTION**: Never share your private key with anyone or upload it to public repositories. Anyone who possesses it can access your funds, assets, or even gain access to your Universal Profile if the controller has administrative rights! 
+
 ## Further Information
 
 - **How to save gas**: Dont call redefine transactions using the Universal Profile. It will use significantly more gas because the transaction has to go through the smart contract account. Therefore, provide the `PRIVATE_KEY` of a separate Wallet or the [Universal Profile Controller](https://support.lukso.network/extension/controllers).
@@ -45,15 +47,15 @@ GasUsed: 7.38B
 FeesBurnt: 7.55LYX
 TipsPaid: 3.91LYX
 -----------------------------------------------------------------------------------------------
-[23:05:19] Checking conditions for refinement...
+--- Checking conditions for refinement...
 --- Calling refine...
 -----------------------------------------------------------------------------------------------
-Previous refinement is still processing. Skipping this round.
+[23:05:19] Previous refinement is still processing. Skipping this round.
 -----------------------------------------------------------------------------------------------
 Refine called successfully. Waiting for next round...
 ```
 
-> Use `Ctrl+C` to terminate the script.
+> **EXIT**: Use `Ctrl+C` to terminate the script.
 
 ## References
 
