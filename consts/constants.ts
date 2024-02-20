@@ -1,10 +1,11 @@
 /**
  * BurnPix Token IDs as Byte32 Hex
  * Add names to better differenciate them
+ * 
  * Change names and IDs with your own
  */
 export enum TOKEN_ID {
-  GLOBE_WITH_SQUARE = '0x000000000000000000000000f983826c478d89fdb89e9a0d99e70a843fa97635',
+  GLOBE_N_SQUARE = '0x000000000000000000000000f983826c478d89fdb89e9a0d99e70a843fa97635',
   BLUE_BUBBLES = '0x0000000000000000000000006e6a0f9af08d88abaf1f6729b20395517ec51b43',
   SLIM_DRAGON = '0x000000000000000000000000dd55a140dc10f13babc567905a0198824fccba65',
   BURNT_STAR = '0x000000000000000000000000f5603116f71d29e26b9f4cdcc6242a888ccc9900',
@@ -14,6 +15,8 @@ export enum TOKEN_ID {
  * Iterations as Byte32 Hex
  * Default is the maximum per block:
  * 1000 (3e8)
+ * 
+ * https://neptunemutual.com/web3-tools/number-to-bytes32-converter/
  */
 export const ITERATION_NUMBER =
   '0x00000000000000000000000000000000000000000000000000000000000003e8';

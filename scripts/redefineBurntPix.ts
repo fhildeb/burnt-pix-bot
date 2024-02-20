@@ -34,7 +34,7 @@ dotenv.config();
 
 async function main() {
   // Set your token ID and it's final redefinenent number
-  const burntPix = TOKEN_ID.SLIM_DRAGON;
+  const burntPix = TOKEN_ID.GLOBE_N_SQUARE;
   const maximumRedefines = 1111000;
 
   // Import private key to create wallet
