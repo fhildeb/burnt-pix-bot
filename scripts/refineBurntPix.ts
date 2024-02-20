@@ -78,7 +78,9 @@ async function main() {
     console.log(SPLITTER);
 
     if (isWaitingForTransaction) {
-      console.log(`[${new Date().toLocaleTimeString()}] Previous refinement is still processing. Skipping this round.`);
+      console.log(
+        `[${new Date().toLocaleTimeString()}] Previous refinement is still processing. Skipping this round.`,
+      );
       console.log(SPLITTER);
       return;
     }

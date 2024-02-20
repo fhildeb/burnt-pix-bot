@@ -1,8 +1,9 @@
 /**
  * BurnPix Token IDs as Byte32 Hex
- * Add names to better differenciate them
- * 
- * Change names and IDs with your own
+ *
+ * Set names to differenciate all the
+ * different token IDs and exchange their
+ * values with your own token IDs
  */
 export enum TOKEN_ID {
   GLOBE_N_SQUARE = '0x000000000000000000000000f983826c478d89fdb89e9a0d99e70a843fa97635',
@@ -13,15 +14,10 @@ export enum TOKEN_ID {
 
 /**
  * Iterations as Byte32 Hex
- * 
+ *
  * Default is the minimum number possible per block:
  * 2000 (07d0)
- * 
- * The number of iterations that can be completed depends on 
- * how many pixels need to refined and changes for every NFT. 
- * If you choose a number thats too high, iterations will 
- * abort mid-way and cost you some extra gas.
- * 
+ *
  * Common values:
  * 5000 (1388)
  * 4000 (0fa0)
@@ -30,20 +26,17 @@ export enum TOKEN_ID {
  * 1000 (03e8)
  * 889  (0379)
  * 111  (006f)
- * 
+ *
  * https://neptunemutual.com/web3-tools/number-to-bytes32-converter/
  */
 export const ITERATION_NUMBER =
   '0x00000000000000000000000000000000000000000000000000000000000007d0';
 
 /**
- * Minimum LYX Balance of your controller 
- * Set to 0.2 so transactions dont fail. 
- * 
- * Depending on current gas price, 
- * 2k refinements can cost 0.02-0.1 LYX
- */ 
-export const MIN_LYX_BALANCE = 0.2;
+ * Minimum LYX Balance of your controller
+ * Set to 0.15 so transactions don't fail.
+ */
+export const MIN_LYX_BALANCE = 0.15;
 
 // Maximum Gas Price in Gwei to execute the transaction
 export const MAX_GAS_PRICE = 2;

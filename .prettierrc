@@ -1,5 +1,4 @@
 {
-  "plugins": ["prettier-plugin-solidity"],
   "overrides": [
     {
       "files": ["*.js", "*.ts"],
