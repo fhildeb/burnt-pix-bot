@@ -35,7 +35,7 @@ dotenv.config();
 async function main() {
   // Set your token ID and it's final refinenent number
   const burntPix = TOKEN_ID.GLOBE_N_SQUARE;
-  const maximumRefines = 1111000;
+  const maximumRefines = 1000000;
 
   // Import private key to create wallet
   const { PRIVATE_KEY } = process.env;

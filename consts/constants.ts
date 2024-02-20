@@ -13,24 +13,39 @@ export enum TOKEN_ID {
 
 /**
  * Iterations as Byte32 Hex
- * Default is the maximum per block:
- * 1000 (3e8)
+ * 
+ * Default is the minimum number possible per block:
+ * 2000 (07d0)
+ * 
+ * The number of iterations that can be completed depends on 
+ * how many pixels need to refined and changes for every NFT. 
+ * If you choose a number thats too high, iterations will 
+ * abort mid-way and cost you some extra gas.
+ * 
+ * Common values:
+ * 5000 (1388)
+ * 4000 (0fa0)
+ * 3000 (0bb8)
+ * 2000 (07d0)
+ * 1000 (03e8)
+ * 889  (0379)
+ * 111  (006f)
  * 
  * https://neptunemutual.com/web3-tools/number-to-bytes32-converter/
  */
 export const ITERATION_NUMBER =
-  '0x00000000000000000000000000000000000000000000000000000000000003e8';
-
-// Minimum LYX Balance of your controller (0.3, default so transactions dont fail)
-export const MIN_LYX_BALANCE = 0.3;
+  '0x00000000000000000000000000000000000000000000000000000000000007d0';
 
 /**
- * Maximum Gas Price to execute the transaction
+ * Minimum LYX Balance of your controller 
+ * Set to 0.2 so transactions dont fail. 
  * 
- * Don't set it too low (below 1) if you don't 
- * know how to manually reset the gas price,
- * as the transaction might get stuck
+ * Depending on current gas price, 
+ * 2k refinements can cost 0.02-0.1 LYX
  */ 
+export const MIN_LYX_BALANCE = 0.2;
+
+// Maximum Gas Price in Gwei to execute the transaction
 export const MAX_GAS_PRICE = 2;
 
 // Burnt Pix Contract Addresses on LUKSO Mainnet
