@@ -33,9 +33,9 @@ interface BurntPixAttributeValue {
 dotenv.config();
 
 async function main() {
-  // Set your token ID and it's final redefinenent number
+  // Set your token ID and it's final refinenent number
   const burntPix = TOKEN_ID.GLOBE_N_SQUARE;
-  const maximumRedefines = 1111000;
+  const maximumRefines = 1111000;
 
   // Import private key to create wallet
   const { PRIVATE_KEY } = process.env;
@@ -157,17 +157,17 @@ async function main() {
     };
 
     /**
-     * Metrix for redifinement
+     * Metrix for refinement
      * - Controller balance that must be fulfilled
      * - Maximum iteration count for the token ID
-     * - Maximum gas price you want to redefine at
+     * - Maximum gas price you want to refine at
      */
     console.log('--- Checking conditions for refinement...');
     if (balanceInLYXNumber <= MIN_LYX_BALANCE) {
       console.log('XXX Requirement not met: Balance less than 0.3 LYX.');
       stopScript();
-    } else if (totalIterations >= maximumRedefines) {
-      console.log('XXX Requirement not met: Redefines fulfilled');
+    } else if (totalIterations >= maximumRefines) {
+      console.log('XXX Requirement not met: Refines fulfilled');
       stopScript();
     }
 

@@ -1,6 +1,6 @@
 # burnt-pix-bot
 
-A Hardhat repository for automated redefindments of Burnt Pix NFTs.
+A Hardhat repository for automated refindments of Burnt Pix NFTs.
 
 ![Burnt Pix Preview](./img/burnt-pix-preview.png)
 
@@ -17,16 +17,16 @@ bun install
 ## Preparation
 
 1. Rename `.env.example` to `.env` and set your `PRIVATE_KEY`
-2. Add your `TOKEN_ID` and names to [`/consts/constants.ts`](./scripts/redefineBurntPix.ts)
-3. Set `burntPix` and `maximumRedefines` in [`/scripts/redefineBurntPix.ts`](./scripts/redefineBurntPix.ts)
+2. Add your `TOKEN_ID` and names to [`/consts/constants.ts`](./scripts/refineBurntPix.ts)
+3. Set `burntPix` and `maximumRefines` in [`/scripts/refineBurntPix.ts`](./scripts/refineBurntPix.ts)
 4. Adjust `ITERATION_NUMBER` and `MAX_GAS_PRICE` in [`/consts/constants.ts`](./consts/constants.ts)
 
 > **CAUTION**: Never share your private key with anyone or upload it to public repositories. Anyone who possesses it can access your funds, assets, or even gain access to your Universal Profile if the controller has administrative rights! 
 
 ## Further Information
 
-- **How to save gas**: Dont call redefine transactions using the Universal Profile. It will use significantly more gas because the transaction has to go through the smart contract account. Therefore, provide the `PRIVATE_KEY` of a separate Wallet or the [Universal Profile Controller](https://support.lukso.network/extension/controllers).
-- **How to get the token ID** To get the `TOKEN_ID` of your Burnt Pix NFT, connect your Universal Profile or wallet to the [Burnt Pix Webpage](https://burntpix.com/) and click redefine. It will pop up a transaction screen showing a `Smart Contract Execution` of `Method: 0xea255583`. The `[0]` value is the token ID of the Burnt Pix and can be copied.
+- **How to save gas**: Dont call refine transactions using the Universal Profile. It will use significantly more gas because the transaction has to go through the smart contract account. Therefore, provide the `PRIVATE_KEY` of a separate Wallet or the [Universal Profile Controller](https://support.lukso.network/extension/controllers).
+- **How to get the token ID** To get the `TOKEN_ID` of your Burnt Pix NFT, connect your Universal Profile or wallet to the [Burnt Pix Webpage](https://burntpix.com/) and click refine. It will pop up a transaction screen showing a `Smart Contract Execution` of `Method: 0xea255583`. The `[0]` value is the token ID of the Burnt Pix and can be copied.
 - **How to get Byte32 values**: Both, the `ITERATION_NUMBER` and `TOKEN_ID` values have to be defined as Byte32 values as hexadecimal strings. You can use the [Byte32 Converter](https://neptunemutual.com/web3-tools/number-to-bytes32-converter/) to set custom iterations. Always make sure iterations and token IDs have the `0x` prefix in front.
 
 ## Execution
@@ -35,10 +35,10 @@ bun install
 
 ```bash
 # Mainnet
-npx hardhat --network luksoMainnet run scripts/redefineBurntPix.ts
+npx hardhat --network luksoMainnet run scripts/refineBurntPix.ts
 
 # Testnet
-npx hardhat --network luksoTestnet run scripts/redefineBurntPix.ts
+npx hardhat --network luksoTestnet run scripts/refineBurntPix.ts
 ```
 
 ### Terminal Output
