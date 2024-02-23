@@ -9,8 +9,13 @@ A Hardhat repository for automated refindments of Burnt Pix NFTs.
 **This repository uses the [bun](https://bun.sh) toolkit to manage packages and run scripts.Make sure to [install it](https://bun.sh/docs/installation) first.**
 
 ```bash
-git clone git@github.com:fhildeb/burnt-pix-bot.git
+# Download repository
+git clone https://github.com/fhildeb/burnt-pix-bot.git
+
+# Open the folder
 cd burnt-pix-bot
+
+# Install dependencies
 bun install
 ```
 
