@@ -23,8 +23,9 @@ bun install
 
 1. Rename `.env.example` to `.env` and set your `PRIVATE_KEY`
 2. Add your `TOKEN_ID` and names to [`/consts/constants.ts`](./scripts/refineBurntPix.ts)
-3. Set `burntPix` and `maximumRefines` in [`/scripts/refineBurntPix.ts`](./scripts/refineBurntPix.ts)
-4. Adjust `ITERATION_NUMBER` and `MAX_GAS_PRICE` in [`/consts/constants.ts`](./consts/constants.ts)
+3. Update the `const burntPix` variable in [`/scripts/refineBurntPix.ts`](./scripts/refineBurntPix.ts) to match the new `TOKEN_ID` you have added. For example, change `const burntPix = TOKEN_ID.GLOBE_N_SQUARE;` to `const burntPix = TOKEN_ID.NEW_BURNT_PIX;` if `NEW_BURNT_PIX` is your new token ID. This ensures that the script interacts with the correct token ID.
+4. Set `burntPix` and `maximumRefines` in [`/scripts/refineBurntPix.ts`](./scripts/refineBurntPix.ts)
+5. Adjust `ITERATION_NUMBER` and `MAX_GAS_PRICE` in [`/consts/constants.ts`](./consts/constants.ts)
 
 > **CAUTION**: Never share your private key with anyone or upload it to public repositories. Anyone who possesses it can access your funds, assets, or even gain access to your Universal Profile if the controller has administrative rights!
 
